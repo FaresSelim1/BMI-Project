@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - WellnessTracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="auth-page">
+
+    <header class="auth-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="icon">💎</span>
+                <h1>WellnessTracker</h1>
+            </div>
+            <nav class="auth-nav">
+                <a href="signup.html" class="btn-secondary">Sign Up</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="auth-container">
+        <section class="auth-card">
+            <h2>Welcome Back</h2>
+            <p class="auth-subtitle">Please enter your details to log in.</p>
+
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-with-icon">
+                        <span class="input-icon"></span>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="input-with-icon">
+                        <span class="input-icon"></span>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-primary btn-full">
+                    Log In
+                </button>
+            </form>
+
+            <p class="auth-footer">
+                Don't have an account?
+                <a href="signup.html">Create account</a>
+            </p>
+        </section>
+    </main>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

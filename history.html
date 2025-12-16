@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress - HealthTracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="icon">✅</span>
+                <h1>HealthTracker</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="dashboard.html">Dashboard</a>
+                <a href="calculator.html">Calculator</a>
+                <a href="history.html" class="active">Progress</a>
+                <button class="avatar-btn" aria-label="User Profile">👤</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="page-header">
+            <div>
+                <h2>Track Your Progress</h2>
+                <p class="subtitle">View and manage your BMI history.</p>
+            </div>
+            <button class="btn-primary" id="addEntryBtn">
+                <span>➕</span> Add New Entry
+            </button>
+        </div>
+
+        <section class="filter-tabs">
+            <button class="tab-btn active" data-period="30">Last 30 Days</button>
+            <button class="tab-btn" data-period="180">6 Months</button>
+            <button class="tab-btn" data-period="all">All Time</button>
+        </section>
+
+        <section class="chart-card">
+            <h3>BMI Over Time</h3>
+            <div class="chart-header">
+                <span class="chart-value" id="currentBMI">24.1</span>
+                <span class="chart-change">Last 30 Days <span class="positive">↑ 0.2%</span></span>
+            </div>
+            <canvas id="bmiChart" width="800" height="300"></canvas>
+        </section>
+
+        <section class="history-section">
+            <h3>History</h3>
+            <div class="table-container">
+                <table class="history-table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Weight</th>
+                            <th>Height</th>
+                            <th>BMI</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyTableBody">
+                        <tr>
+                            <td>2024-01-30</td>
+                            <td>165 lbs</td>
+                            <td>5'10"</td>
+                            <td>23.7</td>
+                            <td>
+                                <button class="icon-btn edit-btn" aria-label="Edit">✏️</button>
+                                <button class="icon-btn delete-btn" aria-label="Delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-20</td>
+                            <td>164 lbs</td>
+                            <td>5'10"</td>
+                            <td>23.5</td>
+                            <td>
+                                <button class="icon-btn edit-btn" aria-label="Edit">✏️</button>
+                                <button class="icon-btn delete-btn" aria-label="Delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-10</td>
+                            <td>166 lbs</td>
+                            <td>5'10"</td>
+                            <td>23.8</td>
+                            <td>
+                                <button class="icon-btn edit-btn" aria-label="Edit">✏️</button>
+                                <button class="icon-btn delete-btn" aria-label="Delete">🗑️</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2024-01-01</td>
+                            <td>165 lbs</td>
+                            <td>5'10"</td>
+                            <td>23.7</td>
+                            <td>
+                                <button class="icon-btn edit-btn" aria-label="Edit">✏️</button>
+                                <button class="icon-btn delete-btn" aria-label="Delete">🗑️</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/history.js"></script>
+</body>
+</html>

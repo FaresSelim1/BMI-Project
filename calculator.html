@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - HealthTracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="main-header">
+    <div class="header-content">
+        <div class="logo">
+            <span class="icon">📊</span>
+            <h1>HealthTracker</h1>
+        </div>
+        <nav class="main-nav">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="calculator.html" class="active">Calculator</a>
+            <a href="history.html">Progress</a>
+            <button class="avatar-btn" aria-label="User Profile">👤</button>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+    <h2>Calculate BMI</h2>
+    <p class="subtitle">Enter your latest weight and height to update your BMI.</p>
+
+    <section class="settings-card">
+        <form id="bmiForm" class="settings-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="weight">Weight</label>
+                    <input type="number" id="weight" name="weight" placeholder="e.g. 70" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label for="weightUnit">Unit</label>
+                    <select id="weightUnit" name="weightUnit">
+                        <option value="kg">Kilograms (kg)</option>
+                        <option value="lb">Pounds (lb)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="heightCm">Height (cm)</label>
+                    <input type="number" id="heightCm" name="heightCm" placeholder="e.g. 175" step="0.1" required>
+                </div>
+                <div class="form-group">
+                    <label>&nbsp;</label>
+                    <p class="subtitle">Pulled from your account settings when available.</p>
+                </div>
+            </div>
+
+            <div class="form-actions">
+                <button type="button" class="btn-logout" id="backBtn">← Back</button>
+                <button type="submit" class="btn-primary">Calculate BMI</button>
+            </div>
+        </form>
+
+        <div class="bmi-card" style="margin-top:24px;">
+            <h3>Your Result</h3>
+            <div class="bmi-result">
+                <span class="bmi-value" id="bmiResult">—</span>
+                <span class="bmi-status" id="bmiLabel"></span>
+            </div>
+            <p class="last-updated" id="bmiInfo">Enter your data and submit to see your BMI.</p>
+        </div>
+    </section>
+</main>
+
+<script src="js/calculator.js"></script>
+</body>
+</html>

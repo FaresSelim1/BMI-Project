@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - BMI Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="icon">🛡️</span>
+                <h1>BMI Tracker</h1>
+            </div>
+            <button class="avatar-btn" aria-label="User Profile">👤</button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h2>Welcome back, <span id="userName">Alex</span>!</h2>
+        <p class="subtitle">Here is a summary of your health journey.</p>
+
+        <section class="bmi-card">
+            <h3>Your Last BMI</h3>
+            <div class="bmi-result">
+                <span class="bmi-value" id="lastBMI">22.5</span>
+                <span class="bmi-status" id="bmiStatus">Normal</span>
+            </div>
+            <p class="last-updated">Last updated: <span id="lastUpdated">Oct 26, 2023</span></p>
+        </section>
+
+        <section class="actions-section">
+            <h3>What would you like to do?</h3>
+            <div class="action-cards">
+                <a href="calculator.html" class="action-card">
+                    <span class="action-icon">🧮</span>
+                    <div class="action-content">
+                        <h4>Calculate BMI</h4>
+                        <p>Enter your latest weight and height.</p>
+                    </div>
+                </a>
+                <a href="history.html" class="action-card">
+                    <span class="action-icon">📈</span>
+                    <div class="action-content">
+                        <h4>Progress History</h4>
+                        <p>View your BMI changes over time.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
